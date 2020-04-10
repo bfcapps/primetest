@@ -42,6 +42,7 @@ namespace Primetest.Controllers
             {
                 // Força o usuario a ser sempre "funcionario"
                 model.Role = "employee";
+                model.image = "https://i.imgur.com/FApqk3D.jpeg";
 
                 context.Accounts.Add(model);
                 await context.SaveChangesAsync();
