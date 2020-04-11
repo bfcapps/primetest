@@ -53,8 +53,8 @@ namespace Primetest
                 };
             });
 
-            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
-           // services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));            
+            //services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));            
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>

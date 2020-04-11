@@ -7,7 +7,7 @@ namespace Primetest.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "image",
+                name: "Token",
                 table: "Accounts",
                 nullable: true);
         }
@@ -15,7 +15,7 @@ namespace Primetest.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "image",
+                name: "Token",
                 table: "Accounts");
         }
     }

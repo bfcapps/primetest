@@ -9,7 +9,7 @@ using Primetest.Data;
 namespace Primetest.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200410045238_AddProductReviews")]
+    [Migration("20200411011053_AddProductReviews")]
     partial class AddProductReviews
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,9 @@ namespace Primetest.Migrations
                         .HasMaxLength(20);
 
                     b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Token")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")

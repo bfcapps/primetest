@@ -33,6 +33,9 @@ namespace Primetest.Migrations
                     b.Property<string>("Role")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(20)")

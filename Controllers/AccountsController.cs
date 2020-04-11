@@ -42,7 +42,7 @@ namespace Primetest.Controllers
             {
                 // Força o usuario a ser sempre "funcionario"
                 model.Role = "employee";
-                model.image = "https://i.imgur.com/FApqk3D.jpeg";
+                model.image = "https://picsum.photos/300/";
 
                 context.Accounts.Add(model);
                 await context.SaveChangesAsync();
@@ -105,10 +105,11 @@ namespace Primetest.Controllers
             var token = TokenService.GenerateToken(accounts);
             // Esconde a senha
             accounts.Password = "";
+            accounts.Token = token;
             return new
             {
                 accounts = accounts,
-                token = token
+               // token = token
             };
         }
     }
